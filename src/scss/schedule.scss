@@ -1,0 +1,144 @@
+.schedule {
+  padding-bottom: rem(90);
+
+  &__container {
+    display: flex;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    max-width: rem(469);
+  }
+}
+
+.info-schedule {
+  margin-right: rem(32);
+
+  &__item {
+    font-weight: 400;
+    font-size: rem(18);
+    line-height: rem(32);
+  }
+
+  &__title {
+    margin: rem(10) 0;
+    font-weight: 600;
+    font-size: rem(24);
+    line-height: rem(32);
+  }
+
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: rem(20);
+    border-bottom: 1px solid #E7E7E7;
+    @media (max-width: 1441px) {
+      @include adaptiveValue("padding-bottom", 20, 5, 1440, 1024);
+    }
+  }
+
+  &__name {
+    width: 80%;
+    margin-right: -10%;
+    @include adaptiveValue("font-size", 18, 12, 1024, 320);
+    text-align: end;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: nowrap;
+    &::after {
+      content: ' . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .';
+      font-size: rem(40);
+      color: $mainGold;
+      white-space: nowrap;
+      overflow: hidden;
+      @media (max-width: 1024px) {
+        @include adaptiveValue("font-size", 40, 25, 1024, 320);
+      }
+    }
+    @media (max-width: 1024px) {
+      width: 87%;
+      margin-right: -10%;
+    }
+  }
+
+  &__annotation {
+    display: inline-block;
+    align-self: flex-end;
+    margin-left: 11%;
+    padding-left: rem(3);
+    @include adaptiveValue("font-size", 18, 12, 1024, 320);
+    text-align: end;
+    letter-spacing: normal;
+    vertical-align: bottom;
+    white-space: nowrap;
+  }
+  @media (max-width: 1024px) {
+    margin-right: 0;
+    margin-bottom: rem(50);
+    max-width: 100%;
+  }
+}
+
+
+.image-schedule {
+  position: relative;
+  margin-right: rem(32);
+  &__background {
+    width: rem(471);
+    height: rem(502);
+    margin: rem(51) rem(100);
+    border: 2px solid #D3B47F;
+    @media (max-width: 1440px) {
+      @include adaptiveValue("width", 471, 330, 1441, 1024);
+      @include adaptiveValue("height", 502, 352, 1441, 1024);
+      @include adaptiveValue("margin-top", 51, 36, 1441, 1024);
+      @include adaptiveValue("margin-right", 100, 70, 1441, 1024);
+      @include adaptiveValue("margin-bottom", 51, 36, 1441, 1024);
+      @include adaptiveValue("margin-left", 100, 70, 1441, 1024);
+    }
+    @media (max-width: 1024px) {
+      @include adaptiveValue("width", 471, 136, 1024, 320);
+      @include adaptiveValue("height", 502, 145, 1024, 320);
+      @include adaptiveValue("margin-top", 51, 22, 1024, 320);
+      margin-right: auto;
+      @include adaptiveValue("margin-bottom", 51, 22, 1024, 320);
+      margin-left: auto;
+    }
+  }
+
+  img {
+    @media (max-width: 1440px) {
+      @include adaptiveValue("width", 323, 227, 1441, 1024);
+    }
+    @media (max-width: 1024px) {
+      @include adaptiveValue("width", 323, 94, 1024, 320);
+    }
+  }
+
+  &__right-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @media (max-width: 1024px) {
+      @include adaptiveValue("right", 160, 45, 1024, 320);
+    }
+  }
+
+  &__left-image {
+    position: absolute;
+    top: 18%;
+    left: 0;
+    @media (max-width: 1440px) {
+      @include adaptiveValue("top", 110, 80, 1441, 1024);
+    }
+    @media (max-width: 1024px) {
+      @include adaptiveValue("top", 110, 45, 1024, 320);
+      @include adaptiveValue("left", 160, 45, 1024, 320);
+    }
+  }
+  @media (max-width: 1024px) {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,21 @@
+<div id="reserve" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">Закрыть</button>
+      <div class="popup__text">
+        <!-- <form action="form" class="popap-form">
+          <input type="text" name="name" placeholder="Имя" class="popap-form__input">
+          <input type="text" name="tel" placeholder="Номер телефона" class="popap-form__input">
+          <input type="text" name="mail" placeholder="Почта" class="popap-form__input">
+          <input type="button" name="button" id="btn" value="Отправить" class="popap-form__send" />
+        </form> -->
+        <form data-ajax method="POST" action="../sendmail.php" class="small-form popap-form form" id="testForm">
+          <input type="text" id="username" name="username" required class="popap-form__input" placeholder="Имя">
+          <input data-required="email" type="email" id="useremail" name="useremail" required class="popap-form__input"
+            placeholder="Почта">
+          <button id="send" class="btn btn-info popap-form__send">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

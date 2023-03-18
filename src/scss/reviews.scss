@@ -1,0 +1,72 @@
+.reviews {
+  background-color: $corpColor;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("min-height", 782, 500);
+    padding: rem(30) 0;
+  }
+
+  &__swiper {
+    width: 100%;
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: rem(18);
+  text-align: center;
+}
+
+.slide-reviews {
+  @include adaptiveValue("padding-right", 150, 20);
+  @include adaptiveValue("padding-left", 150, 20);
+  
+  &__image {
+    @include adaptiveValue("width", 83, 42);
+    @include adaptiveValue("height", 58, 29);
+    @include adaptiveValue("margin-bottom", 34, 15);
+  }
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 20, 10);
+    font-weight: 600;
+    @include adaptiveValue("line-height", 40, 30);
+    @include adaptiveValue("font-size", 36, 20);
+    color: $mainGold;
+  }
+
+  &__comment {
+    @include adaptiveValue("margin-bottom", 40, 15);
+    font-weight: 400;
+    font-size: rem(16);
+    @include adaptiveValue("line-height", 40, 30);
+    color: #FFFFFF;
+  }
+
+  &__name {
+    font-weight: 600;
+    @include adaptiveValue("font-size", 24, 18);
+    line-height: rem(40);
+    color: $mainGold;
+    letter-spacing: 0.245em;
+  }
+}
+
+.swiper-button-next::after {
+  color: $mainGold;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.swiper-button-prev::after {
+  color: $mainGold;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
